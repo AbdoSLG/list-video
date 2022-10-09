@@ -23,9 +23,29 @@ body {
       cursor: pointer;
       width: 350px;
       border-radius: 6px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::after{
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         content: "";
+         top: 0;
+         left: 0;
+         background: #00000052;
+         z-index: 0;
+      }
       img {
          border-radius: 6px;
          width: 100%;
+      }
+      svg{
+         position: absolute;
+         font-size: 57px;
+         color: red;
+         z-index: 2;
       }
    }
 }
@@ -40,6 +60,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   z-index: 1000;
    iframe{
       width: 70%;
       height: 300px;
